@@ -28,8 +28,9 @@ namespace CPE200Lab1
                         { 
                             first = Stacknumber.Pop();
                             second = Stacknumber.Pop();
-                        }catch(Exception ex)
+                        }catch(Exception)
                         {
+                            Console.WriteLine("Error");
                             return "E";
                         }
                         Stacknumber.Push(calculate(number, second, first));
