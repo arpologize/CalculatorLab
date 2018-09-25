@@ -9,6 +9,9 @@ namespace CPE200Lab1
     public class RPNCalculatorEngine : CalculatorEngine 
     {
         String memory;
+        /// <summary>
+        /// Calculate with RPN .
+        /// </summary>
         public string Process(string str)
         {
             try
@@ -22,6 +25,9 @@ namespace CPE200Lab1
                 {
                     if (isOperator(number))
                     {
+                        /// <summary>
+                        /// Pop two number to calculate.
+                        /// </summary>
                         string first, second;
                         
                         try

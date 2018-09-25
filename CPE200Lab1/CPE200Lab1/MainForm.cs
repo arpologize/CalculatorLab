@@ -20,7 +20,9 @@ namespace CPE200Lab1
         private string operate;
         private double memory;
         private CalculatorEngine engine;
-
+        /// <summary>
+        /// Reset all the screen
+        /// </summary>
         private void resetAll()
         {
             lblDisplay.Text = "0";
@@ -41,6 +43,9 @@ namespace CPE200Lab1
             resetAll();
         }
 
+        /// <summary>
+        /// Button number if you press can you calculate the number 
+        /// </summary>
         private void btnNumber_Click(object sender, EventArgs e)
         {
             if (lblDisplay.Text is "Error")
@@ -68,7 +73,9 @@ namespace CPE200Lab1
             lblDisplay.Text += digit;
             isAfterOperater = false;
         }
-
+        /// <summary>
+        /// Input number to be a root and 1/x and percent
+        /// </summary>
         private void btnUnaryOperator_Click(object sender, EventArgs e)
         {
             if (lblDisplay.Text is "Error")
@@ -92,7 +99,9 @@ namespace CPE200Lab1
             }
 
         }
-
+        /// <summary>
+        /// Click the operator to operate the number
+        /// </summary>
         private void btnOperator_Click(object sender, EventArgs e)
         {
             if (lblDisplay.Text is "Error")
@@ -132,7 +141,9 @@ namespace CPE200Lab1
             }
             isAllowBack = false;
         }
-
+        /// <summary>
+        /// Show the result
+        /// </summary>
         private void btnEqual_Click(object sender, EventArgs e)
         {
             if (lblDisplay.Text is "Error")
@@ -196,12 +207,16 @@ namespace CPE200Lab1
                 lblDisplay.Text = "-" + lblDisplay.Text;
             }
         }
-
+        /// <summary>
+        /// Reset all the screen
+        /// </summary>
         private void btnClear_Click(object sender, EventArgs e)
         {
             resetAll();
         }
-
+        /// <summary>
+        /// Delete one operator or number
+        /// </summary>
         private void btnBack_Click(object sender, EventArgs e)
         {
             if (lblDisplay.Text is "Error")

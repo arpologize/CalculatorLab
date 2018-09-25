@@ -8,12 +8,17 @@ namespace CPE200Lab1
 {
     public class CalculatorEngine
     {
+        /// <remark>
+        /// Check string is number.
+        /// </remark>
         protected bool isNumber(string str)
         {
             double retNum;
             return Double.TryParse(str, out retNum);
         }
-
+        /// <remark>
+        /// Check string is number.
+        /// </remark>
         protected bool isOperator(string str)
         {
             switch(str) {
@@ -25,7 +30,9 @@ namespace CPE200Lab1
             }
             return false;
         }
-
+        /// <remark>
+        /// Split the string to be a part.
+        /// </remark>
         public string Process(string str)
         {
             string[] parts = str.Split(' ');
@@ -38,6 +45,9 @@ namespace CPE200Lab1
             }
 
         }
+        /// <summary>
+        /// Calculate root,percent,one over x.
+        /// </summary>
         public string unaryCalculate(string operate, string operand, int maxOutputSize = 8)
         {
             switch (operate)
@@ -95,9 +105,14 @@ namespace CPE200Lab1
                     }
                     break;
             }
+            /// <returns>
+            /// Error.
+            /// </returns>
             return "E";
         }
-        
+        /// <summary>
+        /// calculate +,-,*,/
+        /// </summary>
         public string calculate(string operate, string firstOperand, string secondOperand, int maxOutputSize = 8)
         {
             
@@ -136,6 +151,9 @@ namespace CPE200Lab1
                     break;
                 
             }
+            /// <returns>
+            /// Error.
+            /// </returns>
             return "E";
         }
     }
